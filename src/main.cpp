@@ -51,11 +51,11 @@ void setup()
 	delay(100);
 
 	Serial.println("Calibrate MPU6050 strats in...");
-	LEDBlinking(LED_BUILTIN, 5, 1000, 1);
+	LEDBlinking(LED_BUILTIN, 5, 500, 1);
 
 	digitalWrite(LED_BUILTIN, HIGH);
 
-	int loopInt = 1000;
+	int loopInt = 850;
 	for (int i = 0; i < loopInt; i++)
 	{
 		mpu.getEvent(&a, &g, &temp);
